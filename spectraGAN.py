@@ -177,8 +177,8 @@ class spectraGAN():
         self.R_LAMBDA = 1. # R1 regularization weight
         
         # Load the target P(k) distribution: mean and variance per k bin over training set
-        self.tar_Pk = tf.constant(np.load('/global/cscratch1/sd/pharring/cosmic-web-data/Pk_mean_real.npy').astype(np.float32))
-        self.tar_Pk_std = tf.constant(np.load('/global/cscratch1/sd/pharring/cosmic-web-data/Pk_std_real.npy').astype(np.float32))
+        self.tar_Pk = tf.constant(np.load('./data/Pk_mean_real.npy').astype(np.float32))
+        self.tar_Pk_std = tf.constant(np.load('./data/Pk_std_real.npy').astype(np.float32))
         self.tar_Pk_var = tf.pow(self.tar_Pk_std, 2.)
 
 
